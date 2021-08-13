@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package idl;
+
+option go_package = "./";
+
+message ProtoGroupMemberSchema {
+    int32 idx = 1;
+    string group_code = 2;
+    string member = 3;
+}
+
+message ProtoGroupCollectionSchema {
+    int32 idx = 1;
+    string group_name = 2;
+    string manager = 3;
+    string invite_code = 4;
+    string group_img = 5;
+}
+
+service GroupRpc {}

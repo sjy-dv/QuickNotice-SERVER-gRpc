@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package idl;
+
+option go_package = "./";
+
+
+message ProtoCalendarSchema {
+    int32 idx = 1;
+    string event_day = 2;
+    string user_id = 3;
+    string title = 4;
+    string content = 5;
+    string category = 6;
+    string time = 7;
+    string alarm = 8;
+    string color = 9;
+    string group_code = 10;
+}
+
+service CalendarRpc {}

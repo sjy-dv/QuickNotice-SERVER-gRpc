@@ -16,5 +16,19 @@ message ProtoUserSchema {
     string user_img = 9;
 }
 
+message ProtoCreateUser {
+    string user_id = 1;
+    string password = 2;
+    string user_name = 3;
+    string birth = 4;
+    string gender = 5;
+    string email = 6;
+}
 
-service UserRpc {}
+message ProtoResponse {
+    string result = 1;
+}
+
+service UserRpc {
+    rpc CreateUser(ProtoCreateUser) returns (ProtoResponse){}
+}

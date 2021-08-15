@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package idl;
+
+option go_package = "./";
+
+message ProtoBoardSchema {
+    int32 idx = 1;
+    string title = 2;
+    string desc = 3;
+    string user_id = 4;
+    int32 visit_count = 5;
+    string group_idx = 6;
+    string notice = 7;
+    string writer = 8;
+}
+
+message ProtoBoardCommentSchema {
+    int32 idx = 1;
+    int32 b_idx = 2;
+    string user_id = 3;
+    string content = 4;
+    string writer = 5;
+}
+
+service BoardRpc {}
